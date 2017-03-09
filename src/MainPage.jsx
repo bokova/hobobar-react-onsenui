@@ -2,17 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Toolbar, Page, Button} from 'react-onsenui';
 
-import SecondPage from './SecondPage'
+import ContactsPage from './ContactsPage'
+import FormsPage from './FormsPage'
+import InputsPage from './InputsPage'
 
 export default class MainPage extends React.Component {
   pushPage() {
-    this.props.navigator.pushPage({component: SecondPage});
+    this.props.navigator.pushPage({component: ContactsPage});
+  }
+  capture() {
+    this.props.navigator.pushPage({component: FormsPage});
   }
 
   renderToolbar() {
     return (
       <Toolbar>
-        <div className="center">Navigator</div>
+        <div className="center">Map page</div>
       </Toolbar>
     );
   }
@@ -21,9 +26,12 @@ export default class MainPage extends React.Component {
     return (
       <Page renderToolbar={this.renderToolbar}>
         <p style={{textAlign: 'center'}}>
-          <Button onClick={this.pushPage.bind(this)}>Push page</Button>
+          <Button onClick={this.pushPage.bind(this)}>Credits page</Button>
+          <Button onClick={this.capture.bind(this)}>Take a picture</Button>
+
         </p>
       </Page>
     );
   }
+
 }
