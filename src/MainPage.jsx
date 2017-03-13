@@ -22,15 +22,24 @@ export default class MainPage extends React.Component {
     );
   }
 
+
+  renderMap(){
+    return(
+      <div id="map">here goes the map </div>)
+  }
+
   render() {
     return (
       <Page renderToolbar={this.renderToolbar}>
+        <div className="mapContainer" renderMap={this.renderMap}></div>
+
         <p style={{textAlign: 'center'}}>
           <Button onClick={this.pushPage.bind(this)}>Credits page</Button>
           <Button onClick={this.capture.bind(this)}>Take a picture</Button>
-
         </p>
+
       </Page>
+
     );
   }
 

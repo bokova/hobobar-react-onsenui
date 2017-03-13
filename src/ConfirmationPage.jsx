@@ -31,7 +31,8 @@ export default class ConfirmationPage extends React.Component {
         Confirms: The data has been saved to the server
         </p>
         <p style={{textAlign: 'center'}}>
-¸          <Button onClick={this.pushPage.bind(this)}>Done</Button>
+        // TODO: replace pushPage with a reset to the map page
+          <Button onClick={this.pushPage.bind(this)}>Done</Button>
         </p>
       </Page>
     );
